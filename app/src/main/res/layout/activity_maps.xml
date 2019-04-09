@@ -26,6 +26,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:hint="Coordinates"
+        android:maxLines="1"
         map:layout_constraintBottom_toTopOf="@+id/updateMapButton"
         map:layout_constraintEnd_toEndOf="parent"
         map:layout_constraintStart_toStartOf="parent"
@@ -37,8 +38,24 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Update Map"
+        android:onClick="onClick"
         map:layout_constraintBottom_toBottomOf="parent"
         map:layout_constraintEnd_toEndOf="parent"
         map:layout_constraintStart_toStartOf="parent"
         map:layout_constraintTop_toBottomOf="@+id/updateMapText" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/changeMapFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="100dp"
+        android:clickable="true"
+        android:onClick="onClick"
+        map:backgroundTint="@color/colorPrimary"
+        android:tint="@color/white"
+        android:src="@drawable/ic_layers_black_24dp"
+        map:layout_constraintBottom_toBottomOf="@+id/map"
+        map:layout_constraintEnd_toEndOf="@+id/map" />
+
 </android.support.constraint.ConstraintLayout>
